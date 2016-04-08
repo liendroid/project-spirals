@@ -1,0 +1,67 @@
+
+body
+{
+	margin: 40px;
+	//background: #4D6FE8;
+}
+
+div
+{
+	//font-family: 'Pontano Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+	table-layout: fixed;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+td{
+	word-wrap: break-word;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pageLayout
+{
+	display: grid;
+	grid-template-columns: 0.2fr 2fr 0.2fr 2fr;
+	grid-template-rows: 1fr 1fr 2fr;
+	grid-template-areas: ". header header header"
+						 ". general . cover"
+					     ". specific . cover"
+}
+.headerArea
+{
+    font-family: Oxygen, san-serif;
+	font-weight: 700;
+	opacity: 0.8;
+	grid-area: header;
+}
+
+.cover
+{
+	grid-area: cover;
+}
+
+.GeneralInfo
+{
+	background: #EBFAD9;
+	grid-area: general;
+}
+
+.SpecificDetails
+{
+	background: #E1EDE5;
+	grid-area: specific;
+}
