@@ -56,7 +56,7 @@ function createVis()
 		.call(xAxis)
 			.append("text")
 			.attr("class", "label")
-			.attr("x", 650)
+			.attr("x", 200)
 			.attr("y", -60)
 			.style("text-anchor", "end");
 
@@ -69,15 +69,15 @@ function createVis()
 			.attr("y", -80)
             .attr("x", 10)
 			.attr("dy", ".71em")
-			.style("text-anchor", "end")
+			.style("text-anchor", "end");
 	
 	graph.append("g")
 		.attr("class", "xAxis2")
-		.attr("transform", "translate(0," + (svgHeight+10)+")")
+		.attr("transform", "translate(0," + (svgHeight)+")")
 		.call(xAxis)
 			.append("text")
 			.attr("class", "label")
-			.attr("x", 650)
+			.attr("x", 200)
 			.attr("y", 60)
 			.style("text-anchor", "end");
 			
