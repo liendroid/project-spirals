@@ -73,7 +73,9 @@ th {
 {
 	padding: 10px;
 	grid-area: legend;
-	background: #EBFAD9;
+	background: white;
+	border-style: solid;
+	border-width: 3px;
 	display: grid;
 	grid-template-columns: 0.1fr 2fr 4fr;
 	grid-template-rows: 1fr;
@@ -118,6 +120,11 @@ th {
 {
     font-size: 18px;
 }
+.tidbitTitle
+{
+	padding: 5px;
+	font-size: 30px;
+}
 .facts
 {
 	background: #E1EDE5;
@@ -129,9 +136,9 @@ th {
 {
 	display: grid;
 	grid-template-columns: 0.2fr 2fr 2fr 2fr 1fr 0.5fr;
-	grid-template-rows: 0.2fr 3fr 1fr;
-	grid-template-areas: ". header header header legend ."
-						 ". main main main sidebar . "
+	grid-template-rows: 0.2fr 0.3fr 6fr;
+	grid-template-areas: ". header header header header ."
+						 ". main main main legend . "
 						 ". main main main sidebar . "						 
 }
 

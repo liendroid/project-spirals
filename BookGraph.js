@@ -13,6 +13,7 @@ var xScale = d3.scale.linear().range([0, svgWidth]);
 var yScale = d3.scale.linear().range([svgHeight, 0]);
 
 var xAxis = d3.svg.axis().orient("top");
+var xAxis2 = d3.svg.axis().orient("bottom");
 var yAxis = d3.svg.axis().orient("left").tickFormat(d3.format("d"));
 
 var tip = d3.tip()
@@ -68,6 +69,16 @@ function createVis()
 			.attr("y", -80)
             .attr("x", 10)
 			.attr("dy", ".71em")
+			.style("text-anchor", "end")
+	
+	graph.append("g")
+		.attr("class", "xAxis2")
+		.attr("transform", "translate(0," + (svgHeight+10)+")")
+		.call(xAxis)
+			.append("text")
+			.attr("class", "label")
+			.attr("x", 650)
+			.attr("y", 60)
 			.style("text-anchor", "end");
 			
 	graph.selectAll(".bookData").data(bookData)
@@ -119,9 +130,12 @@ function updateVis()
 
 	 
 	xAxis.scale(xScale);
+	xAxis2.scale(xScale);
 	yAxis.scale(yScale);
 
 	graph.select(".xAxis").call(xAxis)
+        .select(".label").text("Book Difficulty");
+	graph.select(".xAxis2").call(xAxis2)
         .select(".label").text("Book Difficulty");
 	graph.select(".yAxis").call(yAxis)
         .select(".label").text("Publication Year");
