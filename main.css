@@ -3,7 +3,7 @@
 	background: #E1EDE5;
 	grid-area: header;
 	margin-right: 65px;
-	margin-left: 130px;
+	margin-left: 140px;
 	display: grid;
 	grid-template-columns: 2.5fr 2fr 2fr 0.2fr;
 	grid-template-areas: ". header header header"
