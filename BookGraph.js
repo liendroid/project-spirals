@@ -129,7 +129,7 @@ function updateVis()
 
 function openBookDetails(book)
 {
-	var popupWindow = window.open("", book.Title_of_novel + " Details", "width=800, height=600");
+	var popupWindow = window.open("", book.Title_of_novel + " Details", "width=800, height=750");
 	var html = "<html><head><title>" + book.Title_of_novel + " Details</title>"
 		+"<link rel = 'stylesheet' type= 'text/css' href='./moreDetails.css'>"
 		+"<link href='https://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>"
